@@ -5,6 +5,7 @@
 body {
     background-color: #2E2F2F;
 }
+
 h1 {
     text-align: center;
     color: #0374ff;
@@ -44,4 +45,10 @@ button:hover {
     color: #0374ff;
     background-color: #898b8b;
     font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
