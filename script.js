@@ -18,8 +18,9 @@ function drawGrid(size) {
     createGrid(Math.pow(size, 2), gridArea);
     
     const cells = document.querySelectorAll('.cell');
+    const color = document.getElementById('colorpicker');
     cells.forEach(cell => cell.addEventListener('mouseenter', function() {
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = color.value;
 }))
 }
 
