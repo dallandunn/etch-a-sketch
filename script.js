@@ -12,6 +12,22 @@ function clearGrid() {
     grid.forEach(cell => cell.style.backgroundColor = 'white');
 }
 
+const random = document.querySelector('#random')
+random.addEventListener('change', function() {
+    if (this.checked) {
+        random.classList.add('checked')
+    } else {
+        random.classList.remove('checked')
+    }
+})
+
+function randomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function drawGrid(size) {
     const gridArea = document.getElementById('container');
     gridArea.style.gridTemplateColumns = `repeat(${size}, minmax(1px, 1fr))`
@@ -20,8 +36,12 @@ function drawGrid(size) {
     const cells = document.querySelectorAll('.cell');
     const color = document.getElementById('colorpicker');
     cells.forEach(cell => cell.addEventListener('mouseenter', function() {
-    this.style.backgroundColor = color.value;
-}))
+        if (document.querySelector('.checked')) {
+            this.style.backgroundColor = randomColor();
+        } else {
+            this.style.backgroundColor = color.value;
+        }
+    }))
 }
 
 function setValue(range, value) {

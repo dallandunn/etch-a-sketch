@@ -1,11 +1,18 @@
 * {
-    background-color: green;
+    color :#f3f3f3;
+}
+
+body {
+    background-color: #2E2F2F;
 }
 h1 {
     text-align: center;
+    color: #0374ff;
+    font-weight: bold;
 }
 
 #container {
+    margin-top: 10px;
     width: 750px;
     height: 750px;
     display: grid;
@@ -25,4 +32,16 @@ h1 {
 
 .slider {
     height: 15px;
+}
+
+button {
+    background-color: #788585;
+    border: solid 1px #7b8d8d;
+    color: #2E2F2F;
+}
+
+button:hover {
+    color: #0374ff;
+    background-color: #898b8b;
+    font-weight: bold;
 }
