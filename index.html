@@ -8,7 +8,15 @@
     </head>
 
     <body>
-        <button id="clear" onclick="clearGrid()">Reset</button>
+        <header>
+            <h1>Etch-A-Sketch</h1>
+        </header>
+        <div clas="options">
+            <button id="clear" onclick="clearGrid()">Clear</button>
+            <input type="range" min="1" max="100" value="16" class="slider" id="gridRange">
+            <span class="rangeValue">16 x 16</span>
+        </div>
+
         <div id="container"></div>
 
     </body>    
